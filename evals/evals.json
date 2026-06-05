@@ -1,0 +1,104 @@
+{
+  "skill_name": "scholar-assistant",
+  "description": "触发评估：验证 6 个 skills 的 description 是否能正确匹配用户意图",
+  "evals": [
+    {
+      "id": 1,
+      "skill": "init-kb",
+      "prompt": "帮我创建一个学术知识库，放在 ~/research/my-papers/ 下面，要能存论文和读书笔记的那种",
+      "expected_output": "触发 init-kb skill，创建三层架构目录",
+      "files": []
+    },
+    {
+      "id": 2,
+      "skill": "init-kb",
+      "prompt": "我想在 Obsidian vault 里搭建一个研究用的知识库结构，类似 Karpathy 那种三层架构",
+      "expected_output": "触发 init-kb skill，在 Obsidian vault 中初始化",
+      "files": []
+    },
+    {
+      "id": 3,
+      "skill": "ingest",
+      "prompt": "我读了一篇论文，BibTeX 是 @article{he2016deep, title={Deep Residual Learning...}, author={He, Kaiming...}, year={2016}, journal={CVPR}}，帮我加入知识库",
+      "expected_output": "触发 ingest skill，解析 BibTeX，生成论文知识卡",
+      "files": []
+    },
+    {
+      "id": 4,
+      "skill": "ingest",
+      "prompt": "我需要把 LDA（Latent Dirichlet Allocation）这个方法记录到知识库里，它属于主题模型，用于文本分析。原始论文是 Blei et al. 2003",
+      "expected_output": "触发 ingest skill，创建理论/方法工具卡",
+      "files": []
+    },
+    {
+      "id": 5,
+      "skill": "ingest",
+      "prompt": "刚读完《The Elements of Statistical Learning》，帮我摘录到知识库，主要关注第 7 章关于模型评估的内容，关键句子要带上页码",
+      "expected_output": "触发 ingest skill，创建图书知识卡并标注页码",
+      "files": []
+    },
+    {
+      "id": 6,
+      "skill": "ingest",
+      "prompt": "上周做了一组访谈，三个教授分别对深度学习可解释性发表了看法，这是访谈记录，帮我存到知识库",
+      "expected_output": "触发 ingest skill，创建信息知识卡",
+      "files": []
+    },
+    {
+      "id": 7,
+      "skill": "compile",
+      "prompt": "raw 文件夹里攒了 5 篇论文和 2 本书的笔记了，帮我整理一下，生成摘要和交叉链接",
+      "expected_output": "触发 compile skill，扫描 raw/ 并生成知识卡",
+      "files": []
+    },
+    {
+      "id": 8,
+      "skill": "compile",
+      "prompt": "我的知识库有点乱了，raw 里很多资料还没处理，能不能帮我编译一下？顺便看看这些论文之间有什么联系",
+      "expected_output": "触发 compile skill，处理未加工资料并建立交叉链接",
+      "files": []
+    },
+    {
+      "id": 9,
+      "skill": "search-kb",
+      "prompt": "在我的知识库里有关于 transformer 架构的论文吗？帮我找找，我准备写文献综述",
+      "expected_output": "触发 search-kb skill，返回相关论文和理论",
+      "files": []
+    },
+    {
+      "id": 10,
+      "skill": "search-kb",
+      "prompt": "我需要找一个能处理时间序列因果推断的方法，之前好像在知识库里记录过，帮我检索一下",
+      "expected_output": "触发 search-kb skill，按方法论分类搜索",
+      "files": []
+    },
+    {
+      "id": 11,
+      "skill": "write-paper",
+      "prompt": "我要开始写论文了，主题是注意力机制在医疗图像分析中的应用，文献综述风格，大概 6000 字，用 APA 引用格式",
+      "expected_output": "触发 write-paper skill，启动六阶段写作流程",
+      "files": []
+    },
+    {
+      "id": 12,
+      "skill": "write-paper",
+      "prompt": "帮我起草一份关于图神经网络可扩展性研究的技术报告，需要引用知识库里的相关方法",
+      "expected_output": "触发 write-paper skill，收集素材后撰写",
+      "files": []
+    },
+    {
+      "id": 13,
+      "skill": "lint-kb",
+      "prompt": "帮我检查一下知识库有没有问题，比如死链、缺失文件、过时的内容",
+      "expected_output": "触发 lint-kb skill，生成健康报告",
+      "files": []
+    },
+    {
+      "id": 14,
+      "skill": "lint-kb",
+      "prompt": "知识库维护时间，lint 一下看看有什么要修的",
+      "expected_output": "触发 lint-kb skill",
+      "files": []
+    }
+  ]
+}

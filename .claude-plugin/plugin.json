@@ -1,0 +1,48 @@
+{
+  "name": "scholar-assistant",
+  "displayName": "学术写作助手",
+  "version": "0.1.0",
+  "description": "基于 Karpathy LLM Wiki 架构的学术写作插件，人机协作维护知识库（论文/理论/图书/信息四类知识卡），按 skill 调用逻辑辅助学术论文写作",
+  "author": {
+    "name": "Scholar Assistant"
+  },
+  "license": "MIT",
+  "keywords": ["academic-writing", "knowledge-base", "research", "paper", "bibtex"],
+  "skills": "./skills/",
+  "agents": "./agents/",
+  "hooks": "./hooks/hooks.json",
+  "userConfig": {
+    "kb_scope": {
+      "type": "string",
+      "title": "知识库作用域",
+      "description": "全局知识库：所有项目共享（适合单一研究方向）。项目知识库：仅当前项目使用（适合多项目并行研究）。自定义路径：如 Obsidian vault。",
+      "default": "global",
+      "enum": ["global", "project", "custom"]
+    },
+    "kb_path": {
+      "type": "string",
+      "title": "知识库路径",
+      "description": "知识库根目录的绝对路径。全局作用域建议 ~/.claude/scholar-assistant/knowledge-base/；项目作用域建议 ./.claude/knowledge-base/；Obsidian 用户填入 vault 路径。首次使用必须配置。",
+      "required": true
+    },
+    "default_citation_style": {
+      "type": "string",
+      "title": "默认引用格式",
+      "description": "论文写作时使用的默认参考文献格式",
+      "default": "APA",
+      "enum": ["APA", "MLA", "GB7714"]
+    },
+    "author_name_zh": {
+      "type": "string",
+      "title": "作者中文名",
+      "description": "用于中文论文署名",
+      "default": ""
+    },
+    "author_name_en": {
+      "type": "string",
+      "title": "作者英文名",
+      "description": "用于英文参考文献署名",
+      "default": ""
+    }
+  }
+}
