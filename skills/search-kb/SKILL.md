@@ -1,4 +1,5 @@
 ---
+name: search-kb
 description: >
   搜索学术知识库。当用户说"查找相关资料"、"搜索知识库"、"有没有关于 X 的论文"、
   "知识库里有 Y 方法吗"、"search knowledge base"、"find papers about"、

@@ -1,4 +1,5 @@
 ---
+name: init-kb
 description: >
   初始化知识库目录结构。当用户说"创建知识库"、"初始化知识库"、"新建学术知识库"、
   "setup knowledge base"、"init kb"、或首次使用插件需要配置知识库路径时使用此 skill。

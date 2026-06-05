@@ -1,4 +1,5 @@
 ---
+name: write-paper
 description: >
   学术论文写作主流程。当用户说"写论文"、"开始写作"、"写文献综述"、"帮我写引言"、
   "起草论文"、"write paper"、"draft article"、"写一篇关于 X 的论文"、
